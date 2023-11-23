@@ -15,3 +15,56 @@
 .animation-loop {
   animation: textAnimation 1.5s linear infinite;
 }
+
+.loadingAnimation {
+  animation: s 2s 2s linear forwards;
+  transform: rotateY(90deg);
+  transform-origin: center;
+}
+
+@keyframes s {
+  0% {
+    transform: rotatey(90deg);
+  }
+
+  100% {
+    transform: rotatey(0deg);
+  }
+}
+
+.loadingAnimationFade {
+  animation: Fade 2s linear forwards;
+  opacity: 0%;
+}
+
+@keyframes Fade {
+
+  0%,
+  50% {
+    opacity: 0%;
+  }
+
+  25%,
+  75% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}
+
+.fade-in {
+  opacity: 0%;
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+
+  100% {
+    opacity: 100%;
+  }
+}

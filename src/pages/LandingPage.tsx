@@ -12,10 +12,10 @@ const LandingPage: React.FC<Props> = (props) => {
     { url: '/assets/Medusa.webp', article: 'MEDUSA' },
   ];
 
-
   return (
     <>
       <Slider images={images} />
+      <p className='text-center text-[#F9DF7B] font-Roboto font-extrabold text-5xl my-3 animation-loop'>ITS SLEEK | ITS SEXY | ITS SHEESH</p>
     </>
   );
 };
