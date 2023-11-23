@@ -18,3 +18,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* For Webkit browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F9DF7B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #b98416;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #b98416 #F9DF7B;
+}
+
+/* For Edge */
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #F9DF7B;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #b98416;
+}

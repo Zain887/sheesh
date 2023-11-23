@@ -1,5 +1,13 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { BiLogoTiktok } from "react-icons/bi";
+import { FaFacebook } from "react-icons/fa6";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { AiFillInstagram } from "react-icons/ai";
+
+
+
+
 
 interface Props {
     // Define your component props here
@@ -28,14 +36,28 @@ const Menubar: React.FC<Props> = (props) => {
                         key={index}
                         to={item.link}
                         className={`text-[#F9DF7B] font-Roboto text-md cursor-pointer ${index === activeIndex
-                                ? 'px-2 py-1 font-bold rounded-md bg-[#b98416]'
-                                : 'border-b-2 px-2 py-1 border-transparent hover:border-[#B98416] hover:font-bold  transition-border duration-300'
+                            ? 'px-2 py-1 font-bold rounded-md bg-[#b98416]'
+                            : 'border-b-2 px-2 py-1 border-transparent hover:border-[#B98416] hover:font-bold  transition-border duration-300'
                             }`}
                         onClick={() => setActiveIndex(index)}
                     >
                         {item.label}
                     </NavLink>
                 ))}
+            </div>
+            <div className='flex items-center justify-evenly'>
+                <a href="#">
+                    <BiLogoTiktok color='#F9DF7B' className='mr-2 animation-loop hover:scale-125' size={20} />
+                </a>
+                <a href="#">
+                    <FaFacebook color="#F9DF7B" className='mr-2 animation-loop hover:scale-125' size={20} />
+                </a>
+                <a href="#">
+                    <IoLogoWhatsapp color="#F9DF7B" className='mr-2 animation-loop hover:scale-125' size={20} />
+                </a>
+                <a href="https://www.instagram.com/sheesh.hookahs/">
+                    <AiFillInstagram color="#F9DF7B" className='mr-2 animation-loop hover:scale-125' size={20} />
+                </a>
             </div>
             <NavLink
                 to="/order-now"

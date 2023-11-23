@@ -24,32 +24,30 @@ const Slider: React.FC<Props> = (props) => {
 
     return (
         <div className='relative'>
-            <div className='flex items-center justify-center'>
-                {images.map((collection, index) => (
-                    <div className='relative' key={index}>
-                        <img
-                            src={collection.url}
-                            alt=''
-                            style={{
-                                display: index === currentImageIndex ? 'block' : 'none',
-                            }}
-                            className='w-full min-w-[1364px] h-auto shadow-lg shadow-[#B98416] rounded-md'
-                        />
-                        <div
-                            className='absolute bottom-0 right-0'
-                            style={{
-                                display: index === currentImageIndex ? 'block' : 'none',
-                            }}
+            {images.map((collection, index) => (
+                <div className='relative' key={index}>
+                    <img
+                        src={collection.url}
+                        alt=''
+                        style={{
+                            display: index === currentImageIndex ? 'block' : 'none',
+                        }}
+                        className='w-full min-w-[1364px] h-auto shadow-lg shadow-[#B98416] rounded-md'
+                    />
+                    <div
+                        className='absolute bottom-0 right-0'
+                        style={{
+                            display: index === currentImageIndex ? 'block' : 'none',
+                        }}
+                    >
+                        <h1
+                            className='backdrop-blur-sm rounded-t-xl rounded-l-xl px-4 text-9xl font-Roboto font-extrabold bg-gradient-to-r from-[#F9DF7B] to-[#B98416] text-transparent bg-clip-text'
                         >
-                            <h1
-                                className='backdrop-blur-sm rounded-t-xl rounded-l-xl px-4 text-9xl font-Roboto font-extrabold bg-gradient-to-r from-[#F9DF7B] to-[#B98416] text-transparent bg-clip-text'
-                            >
-                                {collection.article}
-                            </h1>
-                        </div>
+                            {collection.article}
+                        </h1>
                     </div>
-                ))}
-            </div>
+                </div>
+            ))}
             <div className='flex items-center justify-center mt-5'>
                 {images.map((_, index) => (
                     <button
