@@ -1,5 +1,6 @@
 import React, { useState, useEffect, MouseEvent } from 'react';
 import Slider from '../components/Slider';
+import Tracer from '../components/Tracer';
 
 interface Props {
   // Define your component props here
@@ -7,34 +8,18 @@ interface Props {
 
 const LandingPage: React.FC<Props> = (props) => {
   const images = [
-    { url: '/assets/Angelo.webp', article: 'ANGELO' },
-    { url: '/assets/Zollato.webp', article: 'ZOLLATO' },
-    { url: '/assets/Medusa.webp', article: 'MEDUSA' },
+    { url: '/assets/slider/Angelo.webp', article: 'ANGELO' },
+    { url: '/assets/slider/Zollato.webp', article: 'ZOLLATO' },
+    { url: '/assets/slider/Medusa.webp', article: 'MEDUSA' },
   ];
 
   const additionalImages = [
-    '/assets/2.jpg',
-    '/assets/6.jpg',
-    '/assets/8.jpg',
-    '/assets/4.jpg',
+    '/assets/flipCard/2.jpg',
+    '/assets/flipCard/6.jpg',
+    '/assets/flipCard/8.jpg',
+    '/assets/flipCard/4.jpg',
   ];
-  const [positions, setPositions] = useState<{ x: number; y: number }[]>([
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-    { x: 0, y: 0 },
-  ]);
 
-  const handleMouseMove = (index: number, event: MouseEvent) => {
-    const rect = event.currentTarget.getBoundingClientRect();
-    const x = (event.clientX - rect.left) / rect.width;
-    const y = (event.clientY - rect.top) / rect.height;
-
-    setPositions((prevPositions) => {
-      const newPositions = [...prevPositions];
-      newPositions[index] = { x, y };
-      return newPositions;
-    });
-  };
   return (
     <>
       <Slider images={images} />
@@ -56,20 +41,7 @@ const LandingPage: React.FC<Props> = (props) => {
         <p className='text-3xl font-bold mt-5'>Currently most popular <br />
           The Steamulation Highlights</p>
       </div>
-      <div className="flex mt-5 mb-16 justify-evenly">
-        {positions.map((position, index) => (
-          <img
-            key={index}
-            src={`/assets/framtrasn${index + 1}.png`}
-            alt="sheesh"
-            className="w-72 h-auto cursor-pointer hover:scale-110 duration-700 relative"
-            style={{
-              transform: `translate(${position.x * 20}px, ${position.y * 20}px)`,
-            }}
-            onMouseMove={(event) => handleMouseMove(index, event)}
-          />
-        ))}
-      </div>
+      <Tracer />
       <div className='flex p-5'>
         <div className='w-[33.33%] h-full overflow-hidden border-2 border-[#F9DF7B]'>
           <img src="/assets/frame7.jpg" alt="sheesh" width={'100%'} height={'100%'} />

@@ -49,10 +49,10 @@ const Menubar: React.FC<Props> = (props) => {
                 <a href="#">
                     <BiLogoTiktok color='#F9DF7B' className='mr-2 animation-loop hover:scale-125' size={20} />
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/sheesh.hookahs?mibextid=LQQJ4d">
                     <FaFacebook color="#F9DF7B" className='mr-2 animation-loop hover:scale-125' size={20} />
                 </a>
-                <a href="#">
+                <a href="https://wa.me/971502237203">
                     <IoLogoWhatsapp color="#F9DF7B" className='mr-2 animation-loop hover:scale-125' size={20} />
                 </a>
                 <a href="https://www.instagram.com/sheesh.hookahs/">
