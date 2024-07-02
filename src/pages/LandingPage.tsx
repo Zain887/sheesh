@@ -59,7 +59,7 @@ const LandingPage: React.FC<Props> = (props) => {
               <p className='mb-10 font-Roboto text-2xl font-bold'>
                 Hand Crafted in UAE.
               </p>
-              <a href="#" className='text-lg font-light text-black border p-2 border-black hover:bg-black hover:text-[#f9df7b] duration-150'>
+              <a href="/" className='text-lg font-light text-black border p-2 border-black hover:bg-black hover:text-[#f9df7b] duration-150'>
                 Descover More
               </a>
             </div>

@@ -46,7 +46,7 @@ const Menubar: React.FC<Props> = (props) => {
                 ))}
             </div>
             <div className='flex items-center justify-evenly'>
-                <a href="#">
+                <a href="/">
                     <BiLogoTiktok color='#F9DF7B' className='mr-2 animation-loop hover:scale-125' size={20} />
                 </a>
                 <a href="https://www.facebook.com/sheesh.hookahs?mibextid=LQQJ4d">

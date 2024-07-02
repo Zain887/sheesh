@@ -1,9 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+    // add any other paths where you use Tailwind CSS classes
+  ],
   theme: {
     extend: {
-      fontFamily:{
+      fontFamily: {
         Roboto: ['Roboto', 'sans-serif']
       }
     },

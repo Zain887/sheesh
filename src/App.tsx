@@ -8,7 +8,7 @@ import Exclusive from './pages/Exclusive';
 import Store from './pages/Store';
 import Business from './pages/Business';
 import BlackWeeks from './pages/BlackWeeks';
-import Footer from '../Footer';
+import Footer from './components/commonComponents/Footer';
 
 function App() {
   const [loading, setLoading] = useState(true);
