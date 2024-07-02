@@ -4,7 +4,7 @@ interface Props {
     // Define your component props here
 }
 
-const Tracer: React.FC<Props> = (props) => {
+const Tracer: React.FC<Props> = () => {
     const [positions, setPositions] = useState<{ x: number; y: number }[]>([
         { x: 0, y: 0 },
         { x: 0, y: 0 },

@@ -4,7 +4,7 @@ interface Props {
     // Define your component props here
 }
 
-const LoadingAnimation: React.FC<Props> = (props) => {
+const LoadingAnimation: React.FC<Props> = () => {
     return (
         <div className='flex justify-center items-center h-screen'>
             <svg width="504" height="162" viewBox="0 0 504 162" fill="none" xmlns="http://www.w3.org/2000/svg">

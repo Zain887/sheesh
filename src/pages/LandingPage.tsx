@@ -6,7 +6,7 @@ interface Props {
   // Define your component props here
 }
 
-const LandingPage: React.FC<Props> = (props) => {
+const LandingPage: React.FC<Props> = () => {
   const images = [
     { url: '/assets/slider/Angelo.webp', article: 'ANGELO' },
     { url: '/assets/slider/Zollato.webp', article: 'ZOLLATO' },

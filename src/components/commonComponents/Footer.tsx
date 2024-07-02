@@ -1,10 +1,6 @@
 import React from 'react';
 
-interface Props {
-  // Define your component props here
-}
-
-const Footer: React.FC<Props> = (props) => {
+const Footer: React.FC = () => {
   return (
     <footer className='w-full h-20 bg-cover py-16 mt-20' style={{ boxShadow: '0 -8px 6px -6px #F9DF7B' }}>
       <div className='flex justify-evenly items-start'>

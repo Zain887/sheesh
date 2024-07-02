@@ -5,15 +5,11 @@ import { FaFacebook } from "react-icons/fa6";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { AiFillInstagram } from "react-icons/ai";
 
-
-
-
-
 interface Props {
     // Define your component props here
 }
 
-const Menubar: React.FC<Props> = (props) => {
+const Menubar: React.FC<Props> = () => {
     // Define your menu items
     const menuItems = [
         { label: 'Discover', link: '/' },
